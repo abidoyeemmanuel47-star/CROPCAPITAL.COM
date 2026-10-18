@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CROPCAPITAL | Agricultural Commodities</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; color: #203326; background: #f5f7f1; line-height: 1.6; }
+header { background: #123d2b; color: white; padding: 20px; }
+nav { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.logo { font-size: 23px; font-weight: bold; letter-spacing: 1px; }
+.logo span { color: #c4e86b; }
+nav a { color: white; text-decoration: none; margin-left: 12px; font-size: 14px; }
+.hero { background: linear-gradient(135deg, #123d2b, #286b43); color: white; padding: 65px 22px; text-align: center; }
+.hero h1 { font-size: clamp(32px, 7vw, 52px); line-height: 1.2; margin-bottom: 18px; }
+.hero p { max-width: 650px; margin: auto auto 25px; color: #e4efdf; }
+.button { display: inline-block; background: #c4e86b; color: #173b29; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+section { max-width: 1100px; margin: auto; padding: 45px 20px; }
+h2 { text-align: center; margin-bottom: 12px; font-size: 29px; }
+.intro { text-align: center; max-width: 700px; margin: 0 auto 28px; color: #5d6a60; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+.card { background: white; border-radius: 12px; padding: 23px; box-shadow: 0 3px 12px #0000000c; }
+.icon { font-size: 38px; margin-bottom: 10px; }
+.card h3 { margin-bottom: 8px; color: #174c31; }
+.about { background: #e7efdf; max-width: none; }
+.about-inner { max-width: 850px; margin: auto; }
+.contact { text-align: center; }
+footer { background: #123d2b; color: white; padding: 25px 18px; text-align: center; font-size: 13px; }
+.small { font-size: 13px; color: #d4e2d6; margin-top: 10px; }
+@media (max-width: 480px) { nav { justify-content: center; } nav a { margin: 0 5px; } }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">CROP<span>CAPITAL</span></div>
+<div>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home" style="max-width:none">
+<h1>Growing Value Through Agriculture</h1>
+<p>Discover the essential farm commodities that help feed communities and support the agricultural supply chain. Explore rice, maize, beans and other storable crops.</p>
+<a class="button" href="#products">Explore Our Products</a>
+</section>
+
+<section id="products">
+<h2>Our Agricultural Products</h2>
+<p class="intro">Learn about the staple crops that play an important role in food storage, trading and distribution.</p>
+<div class="grid">
+<div class="card"><div class="icon">🌾</div><h3>Rice</h3><p>A widely consumed staple crop that requires proper drying and storage to maintain quality.</p></div>
+<div class="card"><div class="icon">🌽</div><h3>Maize</h3><p>An important grain used for food, animal feed and other agricultural purposes.</p></div>
+<div class="card"><div class="icon">🫘</div><h3>Beans</h3><p>A valuable source of protein that benefits from clean, dry and pest-controlled storage.</p></div>
+<div class="card"><div class="icon">🍫</div><h3>Cocoa</h3><p>An important agricultural commodity traded in local and international markets.</p></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="about-inner">
+<h2>About CROPCAPITAL</h2>
+<p class="intro">CROPCAPITAL is a developing agricultural business concept focused on stored farm commodities and the agricultural supply chain. Our goal is to provide clear information about crop products, storage and responsible agricultural trade.</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p class="intro">Interested in learning more about our agricultural business? Contact our team for further information.</p>
+<a class="button" href="mailto:hello@cropcapital.com">Email Us</a>
+<p style="margin-top:15px;font-size:13px">Email link is a placeholder and may need to be updated.</p>
+</section>
+</main>
+
+<footer>
+<p>© 2026 CROPCAPITAL. All rights reserved.</p>
+<p class="small">Agricultural information only. No investment offer or guaranteed returns are made on this demonstration website.</p>
+</footer>
+</body>
+  </html>
