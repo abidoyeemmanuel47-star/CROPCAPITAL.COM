@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | CROPCAPITAL</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5ed;color:#183b29;min-height:100vh}
+header{background:#123d2b;color:white;padding:20px;text-align:center}
+.logo{font-size:25px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#c4e86b}
+header p{font-size:13px;margin-bottom:0;color:#e0ebdf}
+.container{max-width:440px;margin:35px auto;padding:0 16px}
+.card{background:white;padding:28px 22px;border-radius:14px;box-shadow:0 5px 24px #173b2912}
+h1{text-align:center;font-size:27px;margin:0 0 8px}
+.subtitle{text-align:center;color:#69776c;font-size:14px;margin-bottom:25px}
+label{display:block;font-size:14px;font-weight:bold;margin:15px 0 7px}
+input{width:100%;padding:13px;border:1px solid #ccd6cc;border-radius:7px;font-size:16px;background:#fff}
+input:focus{outline:2px solid #438357;border-color:#438357}
+button{width:100%;padding:14px;background:#1c633b;color:white;border:0;border-radius:7px;font-size:16px;font-weight:bold;margin-top:22px;cursor:pointer}
+button:hover{background:#154d2e}
+.note{font-size:12px;color:#68766b;line-height:1.5;margin-top:18px}
+.login{text-align:center;font-size:14px;margin-top:22px}
+a{color:#1c633b;font-weight:bold}
+footer{text-align:center;padding:20px;color:#69776c;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">CROP<span>CAPITAL</span></div>
+  <p>Agriculture • Commodities • Opportunity</p>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h1>Create Your Account</h1>
+    <p class="subtitle">Join CROPCAPITAL to explore agricultural opportunities.</p>
+
+    <form id="registerForm">
+      <label for="fullname">Full Name</label>
+      <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number" required>
+
+      <label for="password">Create Password</label>
+      <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" placeholder="Enter password again" required>
+
+      <button type="submit">Create Account</button>
+      <p class="note">This is a demonstration page. Submitting this form will not create a real account or send your information anywhere. Do not enter a real password until secure account services have been configured.</p>
+    </form>
+
+    <p class="login">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</main>
+
+<footer>© 2026 CROPCAPITAL. All rights reserved.</footer>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+    alert("Your passwords do not match. Please check and try again.");
+    return;
+  }
+
+  alert("This is a demo registration page. Real account registration is not yet connected.");
+});
+</script>
+</body>
+</html>
