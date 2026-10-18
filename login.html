@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | CROPCAPITAL</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f7f0;
+      color: #173d28;
+    }
+    header {
+      background: #12472d;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0; }
+    main {
+      max-width: 430px;
+      margin: 35px auto;
+      padding: 28px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px #00000012;
+    }
+    h2 { margin-top: 0; }
+    label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd8cc;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 14px;
+      border: 0;
+      border-radius: 7px;
+      background: #b7e34b;
+      color: #173d28;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .note {
+      margin-top: 18px;
+      padding: 12px;
+      background: #fff7dc;
+      border-radius: 7px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+    a { color: #17643b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CROPCAPITAL</h1>
+    <p>Agricultural Investment Platform</p>
+  </header>
+
+  <main>
+    <h2>Welcome Back</h2>
+    <p>Log in to access your account.</p>
+
+    <form id="loginForm">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" autocomplete="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password"
+             autocomplete="current-password" required>
+
+      <button type="submit">Log In</button>
+    </form>
+
+    <div class="note">
+      <strong>Demo version:</strong> Login is not connected to a secure
+      account system yet. No account will be accessed and no password
+      should be entered here.
+    </div>
+
+    <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </main>
+
+  <footer>
+    &copy; 2026 CROPCAPITAL. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("This is a demo page. Secure login has not been set up yet.");
+    });
+  </script>
+</body>
+</html>
