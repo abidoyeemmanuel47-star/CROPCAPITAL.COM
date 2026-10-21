@@ -77,5 +77,69 @@ document.getElementById("registerForm").addEventListener("submit", function(even
   alert("This is a demo registration page. Real account registration is not yet connected.");
 });
 </script>
-</body>
+</body><script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+  const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+  const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  const form = document.getElementById("registerForm");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword =
+      document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+      alert("Your passwords do not match.");
+      return;
+    }
+
+    if (password.length < 8) {
+      alert("Your password must contain at least 8 characters.");
+      return;
+    }
+
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = "Creating account...";
+
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: fullName,
+            phone: phone
+          },
+          emailRedirectTo: window.location.origin + "/login.html"
+        }
+      });
+
+      if (error) throw error;
+
+      if (data.user) {
+        alert(
+          data.session
+            ? "Your account has been created successfully!"
+            : "Registration received! Check your email for a confirmation link."
+        );
+        form.reset();
+      }
+    } catch (error) {
+      alert("Registration failed: " + error.message);
+    } finally {
+      button.disabled = false;
+      button.textContent = "Create Account";
+    }
+  });
+</script>
 </html>
