@@ -3,194 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricultural Opportunities | CROPCAPITAL</title>
-
+  <title>Crop Plans | CROPCAPITAL</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f3f7f0;
-      color: #173d28;
-    }
-
-    header {
-      background: #12472d;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    nav {
-      background: #0b3520;
-      padding: 14px;
+    .plans-hero {
+      background: #eaf5e7;
+      padding: 45px 20px;
       text-align: center;
     }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 30px 15px 15px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 15px;
-    }
-
-    .plans {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 4px 15px #00000010;
-      border-top: 5px solid #b7e34b;
-    }
-
-    .crop {
-      font-size: 42px;
+    .plans-hero h1 {
+      color: #176b3a;
+      font-size: 2.2rem;
       margin-bottom: 10px;
     }
-
-    .card h2 {
-      margin: 5px 0 12px;
-    }
-
-    .card p {
-      line-height: 1.6;
-      color: #46594b;
-    }
-
-    .status {
-      display: inline-block;
-      background: #edf5df;
-      color: #24552f;
-      padding: 7px 10px;
-      border-radius: 5px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .button {
-      display: block;
-      text-align: center;
-      background: #b7e34b;
-      color: #173d28;
-      padding: 12px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 18px;
-    }
-
-    .notice {
-      background: #fff7dc;
-      padding: 18px;
-      border-radius: 8px;
-      line-height: 1.7;
-      margin: 25px 0;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #12472d;
-      color: white;
-      margin-top: 30px;
+    .crop-icon { font-size: 3rem; }
+    .price { color: #176b3a; font-size: 1.6rem; font-weight: bold; }
+    .plan-card { margin-bottom: 15px; }
+    .disclaimer {
+      background: #fff7d9;
+      border: 1px solid #f1dfa0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 25px;
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>CROPCAPITAL</h1>
-    <p>Exploring Opportunities in Agriculture</p>
-  </header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">🌱 CROPCAPITAL</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plans.html">Crop Plans</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="plans.html">Opportunities</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-  </nav>
+<section class="plans-hero">
+  <div class="container">
+    <p class="eyebrow">Explore Agriculture</p>
+    <h1>Our Crop Plans</h1>
+    <p>Explore rice, maize, beans and cocoa farming information.</p>
+  </div>
+</section>
 
-  <section class="intro">
-    <h2>Agricultural Opportunities</h2>
-    <p>Explore agricultural commodities and learn how their supply chains work.</p>
-  </section>
+<section>
+  <div class="container">
+    <div class="plans-grid">
 
-  <main class="container">
-    <div class="plans">
-
-      <article class="card">
-        <div class="crop">🌾</div>
+      <article class="plan-card">
+        <div class="crop-icon">🌾</div>
         <h2>Rice</h2>
-        <p>Learn about rice cultivation, processing, storage, and distribution in Nigeria.</p>
-        <span class="status">Educational Overview</span>
-        <a class="button" href="register.html">Explore Platform</a>
+        <p>Learn about rice cultivation, growing seasons and agricultural production.</p>
+        <p class="price">₦30,000</p>
+        <p>Demonstration amount only</p>
+        <a class="btn" href="rice.html">Learn About Rice</a>
       </article>
 
-      <article class="card">
-        <div class="crop">🌽</div>
+      <article class="plan-card">
+        <div class="crop-icon">🌽</div>
         <h2>Maize</h2>
-        <p>Discover maize production, market demand, storage, and agricultural supply chains.</p>
-        <span class="status">Educational Overview</span>
-        <a class="button" href="rice.html">Explore Rice</a>
-        <a class="button" href="maize.html">Explore Maize</a>
-        <a class="button" href="beans.html">Explore Beans</a>
-        <a class="button" href="cocoa.html">Explore Cocoa</a>
+        <p>Discover maize farming, crop care and harvest practices.</p>
+        <p class="price">₦45,000</p>
+        <p>Demonstration amount only</p>
+        <a class="btn" href="maize.html">Learn About Maize</a>
       </article>
 
-      <article class="card">
-        <div class="crop">🫘</div>
+      <article class="plan-card">
+        <div class="crop-icon">🫘</div>
         <h2>Beans</h2>
-        <p>Learn about bean farming, post-harvest handling, storage, and distribution.</p>
-        <span class="status">Educational Overview</span>
-        <a class="button" href="register.html">Explore Platform</a>
+        <p>Explore bean farming, soil preparation and post-harvest handling.</p>
+        <p class="price">₦65,000</p>
+        <p>Demonstration amount only</p>
+        <a class="btn" href="beans.html">Learn About Beans</a>
       </article>
 
-      <article class="card">
-        <div class="crop">🍫</div>
+      <article class="plan-card">
+        <div class="crop-icon">🍫</div>
         <h2>Cocoa</h2>
-        <p>Explore cocoa cultivation, processing, exports, and its role in agricultural trade.</p>
-        <span class="status">Educational Overview</span>
-        <a class="button" href="register.html">Explore Platform</a>
+        <p>Learn about cocoa cultivation, plant care and harvesting.</p>
+        <p class="price">₦80,000</p>
+        <p>Demonstration amount only</p>
+        <a class="btn" href="cocoa.html">Learn About Cocoa</a>
       </article>
 
     </div>
 
-    <div class="notice">
-      <strong>Important Notice:</strong>
-      These pages currently provide educational information only.
-      No investment is being offered through this demo. No returns are
-      promised, and no payments are accepted. Any future investment
-      opportunities must be supported by appropriate legal documentation,
-      verified operating arrangements, and applicable regulatory approvals.
+    <div class="disclaimer">
+      <strong>Important Notice</strong>
+      <p>These amounts are for demonstration purposes only. This website does not currently accept investments or guarantee profits. Any future investment offering must have a legitimate operating model, appropriate regulatory review and secure payment arrangements.</p>
     </div>
 
-    <p style="text-align:center;">
-      <a href="index.html" style="color:#17643b;">← Back to Home</a>
+    <p style="text-align:center; margin-top:25px;">
+      <a href="index.html">← Back to Home</a>
     </p>
-  </main>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 CROPCAPITAL. All rights reserved.</p>
-  </footer>
+<footer>
+  <div class="container">
+    <p><strong>CROPCAPITAL</strong></p>
+    <p>Agricultural information and demonstration platform.</p>
+    <p>© 2026 CROPCAPITAL</p>
+  </div>
+</footer>
 
 </body>
 </html>
